@@ -35,6 +35,7 @@ app.use(cors())
 console.log('Verificar PORT socket')
 server.listen(4000);
 
+
 app.use('/', userApi);
 app.use('/', mascotaApi);
 app.use('/', mensajesApi);
@@ -53,8 +54,8 @@ io.on("connection", (socket) => {
         });
     });
 });
-
 const PORT = process.env.PORT || 3001
+
 app.listen(PORT, () => {
     console.log("Servidor corriendo correctamente en el puerto", PORT)
 
